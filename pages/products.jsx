@@ -13,7 +13,7 @@ function Product() {
 
     client.fetch(query).then((data) => {
       setSpecialilies(data);
-      console.log({ data });
+      //console.log({ data });
     });
   }, []);
   useEffect(() => {
@@ -21,7 +21,7 @@ function Product() {
 
     client.fetch(query).then((data) => {
       specId ? setProducts(data[0].relatedMovies) : setProducts(data);
-      console.log({ productQuery: data[0].relatedMovies });
+      //console.log({ productQuery: data[0].relatedMovies });
     });
   }, [specId]);
   return (

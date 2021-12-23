@@ -11,7 +11,7 @@ function Header() {
   const [clicked, setClicked] = useState(false);
   const [admin, setAdmin] = useState(false);
   const [name, setName] = useLocalStorage("name", "");
-  console.log({ admin });
+  //console.log({ admin });
   const router = useRouter();
 
   useEffect(() => {

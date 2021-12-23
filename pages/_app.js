@@ -5,7 +5,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   const [name, setName] = useLocalStorage("name", "");
   let isAdmin = name.isAdmin;
-  console.log({ name });
+  //console.log({ name });
   return (
     <LoginContext.Provider value={isAdmin}>
       <Component {...pageProps} />

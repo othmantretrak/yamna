@@ -39,7 +39,7 @@ function Specialilies() {
                 </div>
               </div>
             </div>
-            {products.map((p) => (
+            {specialilies.map((p) => (
               <div key={p._id} className="col-lg-4 col-sm-6">
                 <div className="product-cate">
                   <div>
