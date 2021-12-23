@@ -75,7 +75,7 @@ export default function Home() {
             <div className="row">
               {specialilies.map((s) => (
                 <div key={s._id} className="col-6">
-                  <img src={urlFor(s.mainImage).width(250).url()} />
+                  <img src={urlFor(s.mainImage).width(250).url()} alt="" />
                   <h3>{s.title}</h3>
                 </div>
               ))}
@@ -106,23 +106,36 @@ export default function Home() {
 
         <section className="popular" id="popular">
           <h2 className="title">Populaire</h2>
-          <div className="box-container">
+
+          <div className="row row-cols-1 row-cols-md-2 g-4">
             {products.map((p) => (
-              <div key={p._id} className="box">
-                <span className="price">${p.price}</span>
-                <img src={urlFor(p.mainImage).width(250).url()} />
-                <div className="content"></div>
-                <h3>{p.title}</h3>
-                <div className="stars">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
+              <div key={p._d} className="col">
+                <div className="card h-100">
+                  <Image
+                    className="card-img-top"
+                    src={urlFor(p.mainImage).width(308).url()}
+                    width="380px"
+                    height="200px"
+                    alt=""
+                  />
+
+                  <div className="card-body">
+                    <h5 className="card-title">{p.title}</h5>
+                    <div className="card-text">
+                      {" "}
+                      <div className="stars">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer">
+                    <button className="btn">Commandez</button>
+                  </div>
                 </div>
-                <a href="">
-                  <button className="btn">Commandez</button>
-                </a>
               </div>
             ))}
           </div>
@@ -131,19 +144,24 @@ export default function Home() {
         <div className="container">
           <div className="steps">
             <div className="box">
-              <img src="images/qualité.png" width="150px" />
+              <img src="/images/qualité.png" width="60%" alt="" />
               <h3>Profitez d&apos;une bonne qualité</h3>
             </div>
             <div className="box">
-              <img src="images/livraison.png" width="150px" />
+              <img src="/images/livraison.png" width="60%" alt="" />
               <h3>Livraison Rapide</h3>
             </div>
             <div className="box">
-              <img src="images/conf.png" width="150px" />
+              <img
+                className="p-box"
+                src="/images/conf.png"
+                width="60%"
+                alt=""
+              />
               <h3>La confiance avant Tout</h3>
             </div>
             <div className="box">
-              <img src="images/paiment.png" width="150px" />
+              <img src="/images/paiment.png" width="60%" alt="" />
               <h3>Differents Modes de Paiment </h3>
             </div>
           </div>
@@ -152,7 +170,7 @@ export default function Home() {
           <h2 className="title">Gallerie</h2>
           <div className="box-container">
             <div className="box">
-              <img src="images/biscuit3.png" />
+              <Image src="/images/biscuit3.png" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -165,7 +183,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/img1.jpg" />
+              <Image src="/images/img1.jpg" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -178,7 +196,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/img20.jpg" />
+              <Image src="/images/img20.jpg" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -191,7 +209,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/img21.jpg" />
+              <Image src="/images/img21.jpg" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -204,7 +222,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/img22.jpg" />
+              <Image src="/images/img22.jpg" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -217,7 +235,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/img9.jpg" />
+              <Image src="/images/img9.jpg" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -230,7 +248,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/choco.png" />
+              <Image src="/images/choco.png" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -243,7 +261,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/biscuit2.png" />
+              <Image src="/images/biscuit2.png" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>
@@ -256,7 +274,7 @@ export default function Home() {
               </div>
             </div>
             <div className="box">
-              <img src="images/biscuit.png" />
+              <Image src="/images/biscuit.png" layout="fill" alt="" />
               <div className="content">
                 <h3>biscuit</h3>
                 <p>

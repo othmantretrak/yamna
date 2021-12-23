@@ -63,7 +63,7 @@ function CreateProduct() {
       image: imageAsset?._id,
       speciality,
     });
-    if (title && price && description && imageAsset?._id && speciality) {
+    if (title && price && imageAsset?._id && speciality) {
       const doc = {
         _type: "product",
         title,
@@ -85,6 +85,10 @@ function CreateProduct() {
         .create(doc)
         .then(() => {
           console.log({ doc });
+          setDescription("");
+          setImageAsset("");
+          setPrice("");
+          setTitle("");
         })
         .catch((e) => {
           console.log(e);
@@ -100,9 +104,13 @@ function CreateProduct() {
   return (
     <Layout>
       <div className="d-flex gap-4">
-        {fields && <p className="text-red">Please add all fields.</p>}
         <Sidebar title="Create Product" />
         <form className="flex-grow-1 mt-5">
+          {fields && (
+            <h4 className="bg-danger p-1 rounded-2 text-center text-white">
+              Please add all fields.
+            </h4>
+          )}
           <div className="mb-3">
             <label className="form-label">Title</label>
             <input

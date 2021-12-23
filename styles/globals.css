@@ -18,6 +18,11 @@ body {
   font-family: "Nunito", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 nav {
   padding: 10px 10%;
   width: 100%;
@@ -166,7 +171,6 @@ nav input[type="checkbox"] {
 
 .row {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -298,13 +302,12 @@ nav input[type="checkbox"] {
   flex: 1 1 300px;
   position: relative;
 }
-.popular .box-container .box img {
+.p-image {
   height: 50%;
   width: 100%;
-  object-fit: cover;
   border-radius: 5px;
 }
-.popular .box-container .box .price {
+.p-popular .price {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -315,12 +318,12 @@ nav input[type="checkbox"] {
   border-radius: 5px;
 }
 
-.popular .box-container .box h3 {
+.p-popular h3 {
   color: #333;
   font-size: 25px;
   padding-top: 10px;
 }
-.popular .box-container .box i {
+.p-popular i {
   color: #ff1966;
   font-size: 17px;
   padding: 10px 10px;
@@ -335,6 +338,7 @@ nav input[type="checkbox"] {
 .steps .box {
   flex: 1 1 250px;
   padding: 10px;
+  width: 150px;
   text-align: center;
 }
 .steps .box img {
@@ -375,7 +379,7 @@ nav input[type="checkbox"] {
 }
 .gallery .box-container .box .content {
   position: absolute;
-  top: -100%;
+  top: -120%;
   left: 0;
   height: 100%;
   width: 100%;
@@ -398,10 +402,14 @@ nav input[type="checkbox"] {
 }
 .gallery .box-container .box:hover .content {
   top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
-  margin-top: 80px;
+  margin-top: auto;
   background: #000;
   text-align: center;
 }

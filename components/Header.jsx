@@ -47,7 +47,7 @@ function Header() {
         ) : (
           <></>
         )}
-        {admin === "yes" ? <ActiveLink name="Orders" href="/order" /> : <></>}
+        {admin === "yes" ? <ActiveLink name="Orders" href="/orders" /> : <></>}
         {admin === "yes" || admin === "no" ? (
           <li className="list-group" onClick={logOut}>
             LogOut
