@@ -34,11 +34,10 @@ export default function Home() {
                 Ajoutez Maintenant votre Gateau Préféré à votre Panier et Passez
                 votre Commande à livrée à la ou vous étes ! Profitez de votre
                 Premier Cadeau d&apos;une réduction de 5% !
-                <p>
-                  {" "}
-                  Les Meilleurs Délice Chez <span id="yamna">Yamna</span>{" "}
-                  <span id="delice">Délice</span> .
-                </p>
+              </p>
+              <p>
+                Les Meilleurs Délice Chez <span id="yamna">Yamna</span>
+                <span id="delice">Délice</span> .
               </p>
               <a href="">
                 <button className="btn">Commandez</button>
@@ -56,7 +55,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-right">
-              <img src="images/first.png" />
+              <img src="https://res.cloudinary.com/tretrak/image/upload/v1641130798/yamna/first_phdwfv.png" />
             </div>
           </div>
         </div>
@@ -79,7 +78,6 @@ export default function Home() {
                 <span id="delice">Délice</span> ?
               </h3>
               <p>
-                {" "}
                 Vous voulez des gâteaux faits maison mais vous n&apos;avez pas
                 de temps ? Lorem ipsum dolor sit, amet consectetur adipisicing
                 elit. Quas, adipisci. Quasi fugit magni, velit omnis dicta eaque
@@ -88,7 +86,6 @@ export default function Home() {
               </p>
 
               <button className="btn">
-                {" "}
                 Lire Plus <i className="fa fa-caret-right"></i>
               </button>
             </section>
@@ -113,7 +110,6 @@ export default function Home() {
                   <div className="card-body">
                     <h5 className="card-title">{p.title}</h5>
                     <div className="card-text">
-                      {" "}
                       <div className="stars">
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -135,24 +131,36 @@ export default function Home() {
         <div className="container">
           <div className="steps">
             <div className="box">
-              <img src="/images/qualité.png" width="170px" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1641130789/yamna/qualit%C3%A9_atuxg6.png"
+                width="170px"
+                alt=""
+              />
               <h3>Profitez d&apos;une bonne qualité</h3>
             </div>
             <div className="box">
-              <img src="/images/livraison.png" width="170px" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1641130789/yamna/livraison_ou4p0b.png"
+                width="170px"
+                alt=""
+              />
               <h3>Livraison Rapide</h3>
             </div>
             <div className="box">
               <img
                 className="p-box"
-                src="/images/conf.png"
+                src="https://res.cloudinary.com/tretrak/image/upload/v1641130789/yamna/conf_hdpuxr.png"
                 width="170px"
                 alt=""
               />
               <h3>La confiance avant Tout</h3>
             </div>
             <div className="box">
-              <img src="/images/paiment.png" width="170px" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1641130789/yamna/paiment_mdql2a.png"
+                width="170px"
+                alt=""
+              />
               <h3>Differents Modes de Paiment </h3>
             </div>
           </div>
@@ -160,123 +168,22 @@ export default function Home() {
         <section className="gallery" id="gallery">
           <h2 className="title">Gallerie</h2>
           <div className="box-container">
-            <div className="box">
-              <Image src="/images/biscuit3.png" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
+            {products.slice(0, 9).map((p) => (
+              <div key={p._id} className="box">
+                <Image
+                  src={urlFor(p.mainImage).width(308).url()}
+                  layout="fill"
+                  alt=""
+                />
+                <div className="content">
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                  <div className="button">
+                    <button className="btn">Commandez</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="box">
-              <Image src="/images/img1.jpg" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/img20.jpg" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/img21.jpg" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/img22.jpg" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/img9.jpg" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/choco.png" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/biscuit2.png" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <Image src="/images/biscuit.png" layout="fill" alt="" />
-              <div className="content">
-                <h3>biscuit</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita, omnis.
-                </p>
-                <div className="button">
-                  <button className="btn">Commandez</button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
       </main>
