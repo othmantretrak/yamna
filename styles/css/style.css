@@ -51,7 +51,10 @@ body {
 }
 
 .newslatter {
-  width: 90%;
+  color: white;
+  text-align: center;
+  margin-top: 275px;
+  font-size: 145px;
 }
 
 .newslatter h4 {

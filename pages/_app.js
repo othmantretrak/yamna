@@ -11,6 +11,10 @@ function MyApp({ Component, pageProps }) {
       <>
         <div className="page">
           <div className="countdown-col col">
+            <div className="newslatter middle">
+              <h2>We Will Coming Soon</h2>
+              <h4>Subscribe to get notification when we start</h4>
+            </div>
             <div className="time middle">
               <span>
                 <div id="days">12</div> Days
@@ -26,7 +30,7 @@ function MyApp({ Component, pageProps }) {
               </span>
             </div>
           </div>
-          <div className="newsletter-col col">
+          {/*  <div className="newsletter-col col">
             <div className="newslatter middle">
               <h2>We Will Coming Soon</h2>
               <h4>Subscribe to get notification when we start</h4>
@@ -37,7 +41,7 @@ function MyApp({ Component, pageProps }) {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </>
     </LoginContext.Provider>
